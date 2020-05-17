@@ -1,8 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Project Overview
-This project was created under the cooperation of Gokul Srinivasan, Brian Wang, and Dev Kapadia. Our project, 
-DartPoll, was designed to be used by Dartmouth students as a polling service where students could post and respond to polls. Our project focuses around the administration of polls, and the vizualization of the subsequent poll results. 
+This project was created under the cooperation of Gokul Srinivasan, Brian Wang, and Dev Kapadia as part of DALI's Mini Web Development Course. Our project, DartPoll, was designed to be used by Dartmouth students as a polling service where students could post and respond to polls. Our project focuses around the administration of polls, and the vizualization of the subsequent poll results. 
 
 ## Project Responsibilities
 
@@ -19,83 +16,73 @@ Gokul Srinvasan:
 * Creation and implementation of authentication
 * Interation of timing feature with backend
 
+Brian Wang: 
+
+* Development of basic scaffolding of posting and deleting polls 
+* Creation and implementation of time limit feature and visiualization of time limits using Moment.JS and SVG 
+* Creation and implementation of voting visualization using Chart.JS
+* Assistance in implementing voting visualizations with backend
 
 Dev Kapadia:
 
 * Implementation of all styling
 
-Brian Wang: 
+## Main Features
 
-* Creation and implementation of timing feature
-* Creation and implementation of voting visualization 
+**User Authentication**
+
+We designed a web application that allows for user authentication, storing all of our user data in a Firebase backend. To login, users simply type in their credentials in the respective places. If they do not have an account, they can register a new account that will be added to our backend. 
+
+<img src = "screenshots/login.png" width = "500"> 
+
+**Home Page**
+
+Once a user logs in they are brought to our home page. On this page, users are able to see all active polls. Users can also click "Create a Poll" if they want to pose their own poll. 
+
+<img src = "screenshots/mainPage.png" width = "800">
+
+**Polls** 
+
+This is how every polled is displayed on the home page. If the user has not voted in the poll yet, they will be unable to see the results of the poll (to prevent bias). After a user has voted (like in the below image), they are able to see how many people voted for each answer choice and are also able to see a visualization of the poll data. Users can also see a countdown clock that is counting towards the time when the poll will expire. Users also can delete the polls they posted using the "Delete" button. 
+
+<img src = "screenshots/pollComponent.png" width = "800"> 
+
+**Creating a Poll**
+
+If a user clicks "Create a Poll," this box will appear. Here, a user can enter the question they are posing, add as many answer choices as they wish, choose the category of their poll, and set when the poll will expire. 
+
+<img src = "screenshots/posting.png" width = "350"> 
+
+**Profile Page**
+
+If the user clicks the "Profile" button in our top navigation bar, they are brought to a page that shows them their username/password, as well as a visualization of the results of all the polls they have posted. 
+
+<img src = "screenshots/profile.png" width = "500"> 
+
+**Data Visualizations** 
+
+This is the data visualization of a specific poll. To analyze the results between different categories, users can click specific answer choices in the legend to temporarily remove the answer choice from the data visualization. In this case, the "5'9" answer choice has been ruled out and we are looking at the comparison between the votes of "5'10" and "5'". 
+
+<img src = "screenshots/visualization.png" width = "400"> 
+
+## How to use DartPoll (on your local machine) 
+
+We have not set-up a website to host DartPoll yet. For now, you can follow these steps to run DartPoll on your local machine. But stay tuned because we will have a working website soon!
+
+**STEP 1**
+
+Open your terminal and change the current working directory to the location where you want your cloned directory. Then type git clone ```https://github.com/msorbaro/coast-to-coast.git``` and hit enter.
+
+**STEP 2**
+
+Once cloned, type in ```yarn``` to build the proper depdencies in our project. Then, type in ```yarn start``` to launch the site locally. 
+
+**STEP 3**
+
+Once at the user page, you can use the username "hello@gmail.com" and the password "hello123" to login. You can also make a new account if you wish. 
+
+**STEP 4**
+
+You're in! Thanks for using DartPoll!
 
 
-
-
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
